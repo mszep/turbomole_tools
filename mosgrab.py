@@ -40,7 +40,7 @@ def format_coefficients_line(c):
         return re.sub('E', 'D', s.format(c[0]))
 
 def read_coefficients_vector(ls, n):
-    s = ''.join([ll.strip() for ll in ls])
+    s = ''.join([ll[:-1] for ll in ls])
     C_col = np.zeros(n)
     for i in range(n):
         ss = s[i*20:(i+1)*20]
