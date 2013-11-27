@@ -60,7 +60,7 @@ def read_mos_file(file):
     E[0] = ev
     line = file.next()
     ls = []
-    for j in range((n / 4) +1 ):
+    for j in range((n + 3) / 4):
         ls.append(line)
         line = file.next()
     C[:,0] = read_coefficients_vector(ls, n)
@@ -69,7 +69,7 @@ def read_mos_file(file):
         E[j] = ev
         line = file.next()
         ls = []
-        for jj in range((n / 4) + 1):
+        for jj in range((n + 3 ) / 4):
             ls.append(line)
             line = file.next()
         C[:,j] = read_coefficients_vector(ls, n)
